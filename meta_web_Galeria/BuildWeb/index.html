@@ -65,7 +65,7 @@
             companyName: "MetaMarket",
             productName: "meta_web_Galeria",
             productVersion: "0.1.0",
-            //showBanner: unityShowBanner,
+            showBanner: unityShowBanner,
         };
 
         // By default Unity keeps WebGL canvas render target size matched with
@@ -83,7 +83,6 @@
             meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
             document.getElementsByTagName('head')[0].appendChild(meta);
             container.className = "unity-mobile";
-            unityInstance.SetFullscreen(1);
 
             // To lower canvas resolution on mobile devices to gain some
             // performance, uncomment the following line:
