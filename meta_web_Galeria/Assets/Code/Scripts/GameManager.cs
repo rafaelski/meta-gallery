@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour
         playerInputActions.UI.Enable();
     }
 
+    private void Start()
+    {
+        m_SceneHandle = Addressables.DownloadDependenciesAsync("Cena_0");
+    }
+
 
     private void Update()
     {
@@ -37,7 +42,7 @@ public class GameManager : MonoBehaviour
     private void NextLevel(int lvl)
     {
         levelID = lvl;
-        m_SceneHandle = Addressables.DownloadDependenciesAsync("Cena_" + lvl);
+        // m_SceneHandle = Addressables.DownloadDependenciesAsync("Cena_" + lvl);
         m_SceneHandle.Completed += M_SceneHandle_Completed;
     }
 
