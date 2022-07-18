@@ -171,7 +171,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""id"": ""7ef18fb7-b8b1-4468-9f1c-9e485a66d593"",
                     ""path"": ""<Pointer>/delta"",
                     ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=0.2,y=0.2)"",
+                    ""processors"": ""ScaleVector2(x=0.1,y=0.1)"",
                     ""groups"": ""KeyboardMouse"",
                     ""action"": ""LookAround"",
                     ""isComposite"": false,
