@@ -1012,7 +1012,12 @@ PrefabInstance:
     - target: {fileID: 2815587297279070646, guid: ba471c6377ac2774aad6f268057afef6,
         type: 3}
       propertyPath: m_ControlPath
-      value: <WebGLGamepad>/rightStick
+      value: <Gamepad>/rightStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815587297279070646, guid: ba471c6377ac2774aad6f268057afef6,
+        type: 3}
+      propertyPath: m_MovementRange
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 5871457341568877393, guid: ba471c6377ac2774aad6f268057afef6,
         type: 3}
