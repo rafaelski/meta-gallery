@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Cena_0
+  m_EditorClassIdentifier: 
+  m_GroupName: Cena_0
+  m_Data:
+    m_SerializedData: []
+  m_GUID: b7db0df27455acd43af2e1f680a6034d
+  m_SerializeEntries:
+  - m_GUID: 89e3be9bc7de7074584913d99b1886f6
+    m_Address: Cena_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 94d92f3e8e83e5d4d9b5ea96c051645d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 893c18e60e0066c478b7f2dcca00301a, type: 2}
+    - {fileID: 11400000, guid: da9ab37a1271b184c947ca721b145952, type: 2}
