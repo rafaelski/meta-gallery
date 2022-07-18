@@ -78,7 +78,7 @@ MonoBehaviour:
       - m_Id: cc9dd71e313a800458bcf6bf579a8c36
         m_Value: ServerData/[BuildTarget]
       - m_Id: 2eff95a97512e504987c9013ce9685f1
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://62f233a1-fccf-429f-b628-4b9108c5e2aa.client-api.unity3dusercontent.com/client_api/v1/environments/dev/buckets/4ddcb794-6450-4855-9127-7eb5701e58c9/release_by_badge/latest/entry_by_path/content/?path=
     m_ProfileEntryNames:
     - m_Id: 5a546ed3dc9fa954b9daccaf2d6b80c7
       m_Name: BuildTarget
