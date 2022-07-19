@@ -9,23 +9,23 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class GameManager : MonoBehaviour
 {
 
-    public NewTemplatetInputActions playerInputActions;
+    public NewTemplatetInputActions inputActions;
 
 
     private void Awake()
     {
-        playerInputActions = new NewTemplatetInputActions();
-        //playerInputActions.UI.Enable();
+        inputActions = new NewTemplatetInputActions();
+        inputActions.Player.Enable();
     }
 
     private void OnEnable()
     {
-        playerInputActions.Enable();
+        inputActions.Enable();
     }
 
     private void OnDisable()
     {
-        playerInputActions.Disable();
+        inputActions.Disable();
     }
 
 

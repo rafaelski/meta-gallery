@@ -14,9 +14,9 @@ public class CameraLook : MonoBehaviour
     private NewTemplatetInputActions playerInputActions;
 
 
-    private void Awake()
+    private void Start()
     {
-        playerInputActions = gameManager.playerInputActions;
+        playerInputActions = gameManager.inputActions;
     }
 
     private void Update()

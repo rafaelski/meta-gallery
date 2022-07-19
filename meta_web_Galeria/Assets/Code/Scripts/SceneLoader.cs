@@ -15,13 +15,9 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private GameManager gameManager;
 
 
-    private void Awake()
-    {
-        playerInputActions = gameManager.playerInputActions;
-    }
-
     private void Start()
     {
+        playerInputActions = gameManager.inputActions;
         m_SceneHandle = Addressables.DownloadDependenciesAsync("Cena_0");
     }
 

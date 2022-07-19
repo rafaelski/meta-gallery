@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     public Camera playerCamera;
 
-    private NewTemplatetInputActions playerInputActions;
+    private NewTemplatetInputActions m_inputActions;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private CharacterController controller;
 
@@ -19,11 +19,11 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerVelocity;
 
 
-    private void Awake()
+    private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
 
-        playerInputActions = gameManager.playerInputActions;
+        m_inputActions = gameManager.inputActions;
 
         //playerInputActions = new PlayerInputActions();
         //playerInputActions.Player.Enable();
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
             playerVelocity.y = 0f;
         }
 
-        Vector2 inputVector2 = playerInputActions.Player.Move.ReadValue<Vector2>();
+        Vector2 inputVector2 = m_inputActions.Player.Move.ReadValue<Vector2>();
         Vector3 move = (playerCamera.transform.forward * inputVector2.y + playerCamera.transform.right * inputVector2.x);
         move.y = 0f;
         controller.Move(move * Time.deltaTime * playerSpeed);
