@@ -21,7 +21,7 @@ public class CameraLook : MonoBehaviour
 
     private void Update()
     {
-        Vector2 delta = playerInputActions.Player.Look.ReadValue<Vector2>();
+        //Vector2 delta = playerInputActions.Player.Look.ReadValue<Vector2>();
         //cinemachine.GetInputAxisProvider();
         //freeLook.m_XAxis
     }
