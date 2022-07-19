@@ -206,7 +206,7 @@ namespace UnityEngine.InputSystem
                     ""id"": ""8c8e490b-c610-4785-884f-f04217b23ca4"",
                     ""path"": ""<Pointer>/delta"",
                     ""interactions"": """",
-                    ""processors"": ""NormalizeVector2,ScaleVector2(x=0.2,y=0.2)"",
+                    ""processors"": ""NormalizeVector2,ScaleVector2(x=0.22,y=0.22)"",
                     ""groups"": ""Keyboard&Mouse;Touch"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
