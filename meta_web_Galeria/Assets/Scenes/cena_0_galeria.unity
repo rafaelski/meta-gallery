@@ -846,6 +846,36 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1806789823}
+    - target: {fileID: 4123771156355172410, guid: fd9fe8a95f87e0c40bc46fe6015f0bca,
+        type: 3}
+      propertyPath: m_VerticalAxis.m_MaxSpeed
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123771156355172410, guid: fd9fe8a95f87e0c40bc46fe6015f0bca,
+        type: 3}
+      propertyPath: m_VerticalAxis.m_AccelTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123771156355172410, guid: fd9fe8a95f87e0c40bc46fe6015f0bca,
+        type: 3}
+      propertyPath: m_VerticalAxis.m_SpeedMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123771156355172410, guid: fd9fe8a95f87e0c40bc46fe6015f0bca,
+        type: 3}
+      propertyPath: m_HorizontalAxis.m_MaxSpeed
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123771156355172410, guid: fd9fe8a95f87e0c40bc46fe6015f0bca,
+        type: 3}
+      propertyPath: m_HorizontalAxis.m_AccelTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123771156355172410, guid: fd9fe8a95f87e0c40bc46fe6015f0bca,
+        type: 3}
+      propertyPath: m_HorizontalAxis.m_SpeedMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4123771156708732552, guid: fd9fe8a95f87e0c40bc46fe6015f0bca,
         type: 3}
       propertyPath: m_Name
