@@ -146,21 +146,10 @@
                 },
                 {
                     "name": "",
-                    "id": "7ef18fb7-b8b1-4468-9f1c-9e485a66d593",
-                    "path": "<Pointer>/delta",
-                    "interactions": "",
-                    "processors": "ScaleVector2(x=0.1,y=0.1)",
-                    "groups": "KeyboardMouse",
-                    "action": "LookAround",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d40c4e53-33a4-4dea-b00d-2268957dd5c1",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "NormalizeVector2,ScaleVector2(x=5,y=5)",
+                    "processors": "",
                     "groups": "Gamepad",
                     "action": "LookAround",
                     "isComposite": false,
