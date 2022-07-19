@@ -8,57 +8,28 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class GameManager : MonoBehaviour
 {
-    private int levelID = 0;
-    private AsyncOperationHandle m_SceneHandle;
-    private PlayerInputActions playerInputActions;
+
+    public NewTemplatetInputActions playerInputActions;
 
 
     private void Awake()
     {
-        playerInputActions = new PlayerInputActions();
-        playerInputActions.UI.Enable();
+        playerInputActions = new NewTemplatetInputActions();
+        //playerInputActions.UI.Enable();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        m_SceneHandle = Addressables.DownloadDependenciesAsync("Cena_0");
+        playerInputActions.Enable();
     }
 
-
-    private void Update()
+    private void OnDisable()
     {
-        if (playerInputActions.UI.tecla_1.WasPerformedThisFrame())
-        {
-            NextLevel(0);
-        }
-
-        if (playerInputActions.UI.tecla_1.WasPressedThisFrame())
-        {
-            Screen.fullScreen = true;
-        }
-
-        if (playerInputActions.UI.tecla_2.WasPerformedThisFrame())
-        {
-            NextLevel(0);
-        }
+        playerInputActions.Disable();
     }
 
 
-    private void NextLevel(int lvl)
-    {
-        levelID = lvl;
-        // m_SceneHandle = Addressables.DownloadDependenciesAsync("Cena_" + lvl);
-        m_SceneHandle.Completed += M_SceneHandle_Completed;
-    }
-
-
-    private void M_SceneHandle_Completed(AsyncOperationHandle obj)
-    {
-        if (obj.Status == AsyncOperationStatus.Succeeded)
-        {
-            Addressables.LoadSceneAsync("Cena_" + levelID, UnityEngine.SceneManagement.LoadSceneMode.Single, true);
-        }
-    }
+    
 
 }
 

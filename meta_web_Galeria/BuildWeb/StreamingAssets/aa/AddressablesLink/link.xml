@@ -1,8 +1,10 @@
 <linker>
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="CameraLook" preserve="all" />
     <type fullname="GameManager" preserve="all" />
     <type fullname="OpenURL" preserve="all" />
     <type fullname="PlayerController" preserve="all" />
+    <type fullname="SceneLoader" preserve="all" />
   </assembly>
   <assembly fullname="Cinemachine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Cinemachine.CinemachineBrain" preserve="all" />
@@ -11,7 +13,6 @@
     <type fullname="Cinemachine.CinemachinePipeline" preserve="all" />
     <type fullname="Cinemachine.CinemachinePOV" preserve="all" />
     <type fullname="Cinemachine.CinemachineVirtualCamera" preserve="all" />
-    <type fullname="CinemachineTouchInputMapper" preserve="all" />
     <type fullname="Cinemachine.AxisState" preserve="nothing" serialized="true" />
     <type fullname="Cinemachine.AxisState/Recentering" preserve="nothing" serialized="true" />
     <type fullname="Cinemachine.CinemachineBlendDefinition" preserve="nothing" serialized="true" />
