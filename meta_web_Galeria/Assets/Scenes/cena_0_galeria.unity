@@ -1017,6 +1017,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1814547011723511583, guid: ba471c6377ac2774aad6f268057afef6,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814547011723511583, guid: ba471c6377ac2774aad6f268057afef6,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814547011723511583, guid: ba471c6377ac2774aad6f268057afef6,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814547011723511583, guid: ba471c6377ac2774aad6f268057afef6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5871457341568877393, guid: ba471c6377ac2774aad6f268057afef6,
         type: 3}
       propertyPath: m_Camera
