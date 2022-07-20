@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-
         m_inputActions = gameManager.inputActions;
 
         //playerInputActions = new PlayerInputActions();
@@ -37,6 +36,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
+
     private void MovePlayerByInput()
     {
         groundedPlayer = controller.isGrounded;
@@ -46,6 +46,12 @@ public class PlayerController : MonoBehaviour
         }
 
         Vector2 inputVector2 = m_inputActions.Player.Move.ReadValue<Vector2>();
+
+        if (inputVector2 == new Vector2(0, 0))
+        {
+            return;
+        }
+
         Vector3 move = (playerCamera.transform.forward * inputVector2.y + playerCamera.transform.right * inputVector2.x);
         move.y = 0f;
         controller.Move(move * Time.deltaTime * playerSpeed);

@@ -879,6 +879,45 @@ namespace UnityEngine.InputSystem
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Targets"",
+            ""id"": ""b0bc8710-efc7-467f-a8fc-3b406b9f78f0"",
+            ""actions"": [
+                {
+                    ""name"": ""ClickTarget"",
+                    ""type"": ""Value"",
+                    ""id"": ""5cb3dbe1-da72-4816-847d-762981d9ccbb"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""6bb15987-170b-4d22-9d81-7c0b151ae338"",
+                    ""path"": ""<Touchscreen>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch;Keyboard&Mouse"",
+                    ""action"": ""ClickTarget"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e14d20cd-faba-49f1-b1fe-249522ac63db"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse;Touch"",
+                    ""action"": ""ClickTarget"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -963,6 +1002,9 @@ namespace UnityEngine.InputSystem
             m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
             m_UI_tecla_1 = m_UI.FindAction("tecla_1", throwIfNotFound: true);
             m_UI_tecla_2 = m_UI.FindAction("tecla_2", throwIfNotFound: true);
+            // Targets
+            m_Targets = asset.FindActionMap("Targets", throwIfNotFound: true);
+            m_Targets_ClickTarget = m_Targets.FindAction("ClickTarget", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -1188,6 +1230,39 @@ namespace UnityEngine.InputSystem
             }
         }
         public UIActions @UI => new UIActions(this);
+
+        // Targets
+        private readonly InputActionMap m_Targets;
+        private ITargetsActions m_TargetsActionsCallbackInterface;
+        private readonly InputAction m_Targets_ClickTarget;
+        public struct TargetsActions
+        {
+            private @NewTemplatetInputActions m_Wrapper;
+            public TargetsActions(@NewTemplatetInputActions wrapper) { m_Wrapper = wrapper; }
+            public InputAction @ClickTarget => m_Wrapper.m_Targets_ClickTarget;
+            public InputActionMap Get() { return m_Wrapper.m_Targets; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(TargetsActions set) { return set.Get(); }
+            public void SetCallbacks(ITargetsActions instance)
+            {
+                if (m_Wrapper.m_TargetsActionsCallbackInterface != null)
+                {
+                    @ClickTarget.started -= m_Wrapper.m_TargetsActionsCallbackInterface.OnClickTarget;
+                    @ClickTarget.performed -= m_Wrapper.m_TargetsActionsCallbackInterface.OnClickTarget;
+                    @ClickTarget.canceled -= m_Wrapper.m_TargetsActionsCallbackInterface.OnClickTarget;
+                }
+                m_Wrapper.m_TargetsActionsCallbackInterface = instance;
+                if (instance != null)
+                {
+                    @ClickTarget.started += instance.OnClickTarget;
+                    @ClickTarget.performed += instance.OnClickTarget;
+                    @ClickTarget.canceled += instance.OnClickTarget;
+                }
+            }
+        }
+        public TargetsActions @Targets => new TargetsActions(this);
         private int m_KeyboardMouseSchemeIndex = -1;
         public InputControlScheme KeyboardMouseScheme
         {
@@ -1253,6 +1328,10 @@ namespace UnityEngine.InputSystem
             void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
             void OnTecla_1(InputAction.CallbackContext context);
             void OnTecla_2(InputAction.CallbackContext context);
+        }
+        public interface ITargetsActions
+        {
+            void OnClickTarget(InputAction.CallbackContext context);
         }
     }
 }

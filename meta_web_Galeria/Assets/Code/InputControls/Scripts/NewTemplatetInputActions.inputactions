@@ -855,6 +855,45 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Targets",
+            "id": "b0bc8710-efc7-467f-a8fc-3b406b9f78f0",
+            "actions": [
+                {
+                    "name": "ClickTarget",
+                    "type": "Value",
+                    "id": "5cb3dbe1-da72-4816-847d-762981d9ccbb",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6bb15987-170b-4d22-9d81-7c0b151ae338",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touch;Keyboard&Mouse",
+                    "action": "ClickTarget",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e14d20cd-faba-49f1-b1fe-249522ac63db",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse;Touch",
+                    "action": "ClickTarget",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
