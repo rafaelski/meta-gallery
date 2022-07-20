@@ -29,11 +29,6 @@ public class SceneLoader : MonoBehaviour
             NextLevel(0);
         }
 
-        if (playerInputActions.UI.tecla_1.WasPressedThisFrame())
-        {
-            Screen.fullScreen = true;
-        }
-
         if (playerInputActions.UI.tecla_2.WasPerformedThisFrame())
         {
             NextLevel(0);
