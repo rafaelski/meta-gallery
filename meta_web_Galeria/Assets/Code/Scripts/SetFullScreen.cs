@@ -19,14 +19,22 @@ public class SetFullScreen : MonoBehaviour
     {
         if (playerInputActions.UI.tecla_1.WasPressedThisFrame())
         {
-            Screen.fullScreen = true;
+            Screen.autorotateToPortrait = false;
+            Screen.autorotateToPortraitUpsideDown = false;
+            Screen.autorotateToLandscapeRight = false;
+            Screen.autorotateToLandscapeLeft = true;
             Screen.orientation = ScreenOrientation.LandscapeLeft;
+            Screen.fullScreen = true;
         }
 
         if (playerInputActions.UI.tecla_2.WasPerformedThisFrame())
         {
-            Screen.fullScreen = true;
+            Screen.autorotateToPortrait = false;
+            Screen.autorotateToPortraitUpsideDown = false;
+            Screen.autorotateToLandscapeRight = false;
+            Screen.autorotateToLandscapeLeft = true;
             Screen.orientation = ScreenOrientation.LandscapeLeft;
+            Screen.fullScreen = true;
         }
     }
 }
